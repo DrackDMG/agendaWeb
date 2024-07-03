@@ -38,9 +38,9 @@ export default class ContactFormComponent implements OnInit {
         });
       } else {
         this.form = this.fb.group({
-          name: ["", Validators.required],
-          phone: ["", Validators.required],
-          email: ["", Validators.required],
+          name: ["", Validators.required, Validators.minLength(3)],
+          phone: ["", Validators.required, Validators.pattern(/^\d{10}$/)],
+          email: ["", Validators.required, Validators.email],
         });
       }
     });

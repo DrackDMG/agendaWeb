@@ -19,7 +19,6 @@ export default class ContactListComponent implements OnInit {
   ngOnInit() {
     this.contactService.list().subscribe((contacts) => {
       this.contacts = contacts;
-      console.log(contacts);
     });
   }
 
