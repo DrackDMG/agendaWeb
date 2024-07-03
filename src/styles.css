@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+.header-items {
+  background-color: #f8f9fa;
+  padding: 15px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-items h1 {
+  margin: 0;
+  font-size: 24px;
+}
+.angular-logo {
+  max-width: 5rem;
+}
