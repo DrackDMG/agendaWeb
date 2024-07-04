@@ -61,6 +61,10 @@
         placeholder="Nombre"
         formControlName="name"
       />
+
+      @if (form.get('name')?.hasError('required')){
+      <small class="invalid-feedback d-block">El nombre es requerido</small>
+      }
     </div>
     <div class="mb-3">
       <label for="phone" class="form-label">Teléfono</label>
@@ -71,6 +75,9 @@
         placeholder="Teléfono"
         formControlName="phone"
       />
+      @if (form.get('phone')?.hasError('required')){
+      <small class="invalid-feedback d-block">El telefono es requerido</small>
+      }
     </div>
     <div class="mb-3">
       <label for="email" class="form-label">Correo</label>
@@ -81,6 +88,9 @@
         placeholder="Correo"
         formControlName="email"
       />
+      @if (form.get('email')?.hasError('required')){
+      <small class="invalid-feedback d-block">El correo es requerido</small>
+      }
     </div>
     <div class="d-flex flex-row gap-3">
       <div>
